@@ -17,23 +17,29 @@ Infine, crea un SECONDO array in cui inserirai SOLO gli ambassador.
 */
 
 const marco = {
-    name: "Marco",
-    lastName: "Rossi",
-    isAmbassador: true,
-  }
-  
-  const paul = {
-    name: "Paul",
-    lastName: "Flynn",
-    isAmbassador: false,
-  }
-  
-  const amy = {
-    name: "Amy",
-    lastName: "Reed",
-    isAmbassador: false,
-  }
-  
-  const prices = [34, 5, 2]
-  const shippingCost = 50
-  let utenteCheEffettuaLAcquisto = amy //cambia il valore qui per provare se il tuo algoritmo funziona!
+  name: "Marco",
+  lastName: "Rossi",
+  isAmbassador: true,
+}
+
+const paul = {
+  name: "Paul",
+  lastName: "Flynn",
+  isAmbassador: false,
+}
+
+const amy = {
+  name: "Amy",
+  lastName: "Reed",
+  isAmbassador: false,
+}
+
+const prices = [34, 5, 2]
+const shippingCost = 50
+let utenteCheEffettuaLAcquisto = amy //cambia il valore qui per provare se il tuo algoritmo funziona!
+
+let sommaCarrello = 0
+for (let i = 0; i < prices.length; i++){
+  sommaCarrello += prices[i]
+}
+console.log(sommaCarrello)
