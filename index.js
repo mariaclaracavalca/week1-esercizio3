@@ -36,10 +36,27 @@ const amy = {
 
 const prices = [34, 5, 2]
 const shippingCost = 50
-let utenteCheEffettuaLAcquisto = amy //cambia il valore qui per provare se il tuo algoritmo funziona!
+let utenteCheEffettuaLAcquisto = marco //cambia il valore qui per provare se il tuo algoritmo funziona!
 
 let sommaCarrello = 0
 for (let i = 0; i < prices.length; i++){
   sommaCarrello += prices[i]
 }
+
+if (utenteCheEffettuaLAcquisto.isAmbassador) {
+  sommaCarrello = sommaCarrello - (sommaCarrello) * 0.3
+}
+
+if (sommaCarrello <= 100) {
+  sommaCarrello = sommaCarrello += shippingCost
+}
+
 console.log(sommaCarrello)
+
+const user = []
+user.push(marco, paul, amy)
+
+for ( let i = 0; i < user.length; i++){
+  const users = user[i]
+  console.log(`Nome: ${users.name}, Cognome: ${users.lastName}, Ambassador: ${users.isAmbassador ? 'è ambassador' : 'non è ambassador'}`);
+}
